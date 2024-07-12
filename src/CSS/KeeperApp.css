@@ -8,7 +8,7 @@ header {
     background-color: orange;
     display: flex;
     padding: 4px 0px 10px 30px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 body {
@@ -26,36 +26,54 @@ body {
     justify-content: center;
     margin-top: 2.5rem;
     padding-bottom: 15px;
-    width: 450px;
+    width: 550px;
     box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.348);
-    border-radius: 18px;
+    border-radius: 12px;
+    background-color: white;
 }
 
 .keeperTextArea input {
     width: 400px;
     height: 50px;
     margin-top: 1rem;
-    border-radius: 15px;
     padding-left: 7px;
-    background-color: transparent;
+    padding-top: 10px;
+    background-color: white;
     border: none;
-    border-bottom: solid 0.5px gray;
 }
 
-.keeperTextArea input:focus {
+.keeperTextArea textarea {
+    width: 400px;
+    height: auto;
+    resize: none;
+    border: 0;
+    padding-left: 7px;
+    padding-top: 10px;
+}
+
+.keeperTextArea input:focus,
+textarea:focus {
     outline: none;
+    border-bottom: gray 0.5px solid;
 }
 
 .keeperTextArea button {
     align-self: flex-end;
+    margin-top: 1rem;
     margin-right: 2rem;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: orange;
+    border: none;
+    background-color: white;
 }
 
 .note {
     display: flex;
-    align-items: flex-start;
+    align-self: flex-start;
+    flex-wrap: wrap;
     gap: 50px;
-    width: inherit;
     padding: 25px 150px;
 }
 
@@ -78,5 +96,5 @@ body {
     justify-self: flex-end;
     color: orangered;
     border: none;
-    background-color: transparent;
+    background-color: white;
 }
