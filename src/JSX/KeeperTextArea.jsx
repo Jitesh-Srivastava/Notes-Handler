@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
+import AddCircleIcon from '@mui/icons-material/AddCircle';
+import { Fab } from '@mui/material';
+import { Zoom } from '@mui/material';
 
 export default function KeeperTextArea(props) {
 
+    const [isExpanded, setExpanded] = useState(false)
     const [text, setText] = useState({
         title: "",
         note: ""
@@ -14,25 +18,38 @@ export default function KeeperTextArea(props) {
         })
     }
 
+    function handleSubmit(e) {
+        props.sendText(text);
+        setText({ title: "", note: "" });
+        e.preventDefault()
+    }
+
+    function handleExpand() {
+        setExpanded(true)
+    }
+
     return (
         <form className='keeperTextArea'>
 
-            <input
+            {isExpanded && <input
                 type="text"
                 onChange={handleChange}
                 name="title"
                 value={text.title}
-                placeholder='Enter title' />
+                placeholder='Title' />}
 
-            <input
-                className='mt-2'
+            <textarea
                 type="text"
                 onChange={handleChange}
+                onClick={handleExpand}
                 name="note"
                 value={text.note}
-                placeholder='Enter Note' />
+                placeholder="What's on your mind...."
+                rows={isExpanded ? "1" : "1"} />
 
-            <button className='btn btn-primary mt-2' onClick={(e) => { props.sendText(text); setText({ title: "", note: "" }); e.preventDefault() }}>Submit</button>
+            <Zoom in={isExpanded}>
+                <Fab onClick={handleSubmit}><AddCircleIcon /></Fab>
+            </Zoom>
         </form>
     )
 }
