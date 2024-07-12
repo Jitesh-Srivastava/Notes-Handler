@@ -1,0 +1,82 @@
+h1 {
+    margin: 0%;
+}
+
+header {
+    height: auto;
+    width: 100vw;
+    background-color: orange;
+    display: flex;
+    padding: 4px 0px 10px 30px;
+    color: white;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+}
+
+.keeperTextArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+    padding-bottom: 15px;
+    width: 450px;
+    box-shadow: 2px 1px 30px rgba(0, 0, 0, 0.348);
+    border-radius: 18px;
+}
+
+.keeperTextArea input {
+    width: 400px;
+    height: 50px;
+    margin-top: 1rem;
+    border-radius: 15px;
+    padding-left: 7px;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 0.5px gray;
+}
+
+.keeperTextArea input:focus {
+    outline: none;
+}
+
+.keeperTextArea button {
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+
+.note {
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+    width: inherit;
+    padding: 25px 150px;
+}
+
+.noteCard {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.374);
+    color: orange;
+    border-radius: 15px;
+    padding: 5px 20px;
+    width: 250px;
+    height: 200px;
+}
+
+.noteCard button {
+    align-self: flex-end;
+    justify-self: flex-end;
+    color: orangered;
+    border: none;
+    background-color: transparent;
+}
